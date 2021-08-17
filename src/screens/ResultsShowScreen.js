@@ -8,15 +8,14 @@ const ResultsShowScreen = ({ navigation }) => {
   const [chapterResult, setChapterResult] = useState(null);
   const id = navigation.getParam('id');
 
+  //Remve this Extra call
   const getCourseResult = async id => {
-    const response = await epxService.get(`/course/${id}`);
-    console.log(response.data);
+    const response = await epxService.get(`/course/${id}`);    
     setCourseResult(response.data);
   };
 
   const getChaptersResult = async id => {
-    const response = await epxService.get(`/course/${id}/chapters`);
-    console.log(response.data);
+    const response = await epxService.get(`/course/${id}/chapters`);    
     setChapterResult(response.data);
   };
   useEffect(() => {

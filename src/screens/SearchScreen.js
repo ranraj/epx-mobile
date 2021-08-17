@@ -5,14 +5,17 @@ import useResults from '../hooks/useResults';
 import ResultsList from '../components/ResultsList';
 
 const SearchScreen = () => {
+
   const [term, setTerm] = useState('');
   const [searchApi, results, errorMessage] = useResults();
 
-  const filterResultsByPrice = price => {
-    return results
-    // return results.filter(result => {
-    //   return result.price === price;
-    // });
+
+
+  const recommended = () => {
+    return results.filter((item) => item.likedBy === null);
+  };
+  const mostLiked = () => {
+    return results.filter((item) => item.likedBy != null);
   };
 
   return (
@@ -25,17 +28,15 @@ const SearchScreen = () => {
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <ScrollView>
         <ResultsList
-          results={filterResultsByPrice('')}
+          results={recommended()}
           title="Recommended"
         />
-        <ResultsList results={filterResultsByPrice('$$')} title="Most liked" />
-        <ResultsList
-          results={filterResultsByPrice('')}
-          title="Latest"
-        />
+        <ResultsList results={mostLiked()} title="Most liked" />
+
       </ScrollView>
     </>
   );
+
 };
 
 const styles = StyleSheet.create({});

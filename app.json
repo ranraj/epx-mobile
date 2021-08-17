@@ -5,6 +5,8 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "privacy":"public",
+    "description":"Epx Mobile application to enrich education from public available source",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -27,6 +29,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },    
+    "githubUrl": "https://github.com/ranraj/epx-mobile"
   }
 }

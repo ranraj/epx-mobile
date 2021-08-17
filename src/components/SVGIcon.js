@@ -41,7 +41,7 @@ const SVGIcon = ({ iconTitle }) => {
                     cy="60"
                     r="40"
                     strokeWidth="8"
-                    stroke="gray"
+                    stroke="#a3a3a3"
                     fill="white"
                 />
                 <Text
