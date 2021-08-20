@@ -12,7 +12,8 @@ Connect your mobile
 Check connected android devices
 ```
 adb devices
-//Make sure the result is not empty
+#Make sure the result is not empty
 expo run:android
 ```
+Allow from mobile to install app
 
