@@ -15,7 +15,7 @@ const ResultsShowScreen = ({ navigation }) => {
   };
 
   const getChaptersResult = async id => {
-    const response = await epxService.get(`/course/${id}/chapters`);    
+    const response = await epxService.get(`/course/${id}/chapters`);        
     setChapterResult(response.data);
   };
   useEffect(() => {

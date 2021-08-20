@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44884935564",
+    "project_id": "epx-exam-service",
+    "storage_bucket": "epx-exam-service.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44884935564:android:fe0e5a0022c3a95efb4ca9",
+        "android_client_info": {
+          "package_name": "com.ran.epx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44884935564-eqcfl4vr2f4l3tg8es6f0aqbpprubibe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsmyzosHDXKEksoQ7d-IJGVWtrPY6iqR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44884935564-e8vlbclqht479o8pqm64anlg2r982t25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
