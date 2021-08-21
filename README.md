@@ -1,6 +1,9 @@
 # epx-mobile
 Epx ReactNative Mobile application (Android and IOS)
-
+Stack
+```
+java 8
+```
 Create API Auth key from Firebase for android
 - Download google-services.json 
 - Copy it in the root of the project
