@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import epxService from '../api/EpxService';
 
-const EPX_API_KEY= "<EPX_API_KEY>";
-export default (loggedIn, userInfo, authToken) => {
+const EPX_API_KEY= "";
+export default (key,loggedIn, userInfo, authToken) => {
   const [results, setResults] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
 
   const searchApi = async (searchTerm) => {
-
+    console.log('search')
     try {
       const response = await epxService.get('/course/search', {
         params: {
@@ -26,10 +26,9 @@ export default (loggedIn, userInfo, authToken) => {
     }
   };
 
-  useEffect(() => {
-    console.log(loggedIn);
-    if (loggedIn) {
-      searchApi('');
+  useEffect(() => {    
+    if(!key){
+      searchApi(key);  
     }
   }, []);
 

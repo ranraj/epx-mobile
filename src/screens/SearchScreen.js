@@ -7,7 +7,7 @@ import Login from '../components/Login';
 import Logout from '../components/Logout';
 
 
-const EPX_API_KEY= "<EPX_API_KEY>";
+const EPX_API_KEY= "";
 
 const SearchScreen = () => {
 
@@ -19,7 +19,7 @@ const SearchScreen = () => {
   const [authToken, setAuthToken] = useState(null);
   const [userInfo, setUserInfo] = useState(null);
 
-  const [searchApi, results, errorMessage] = useResults(loggedIn, userInfo,authToken);
+  const [searchApi, results, errorMessage] = useResults(null,loggedIn, userInfo,authToken);
 
   const recommended = () => {
     return results.filter((item) => item.likedBy === null);
@@ -43,7 +43,7 @@ const SearchScreen = () => {
             onTermSubmit={() => searchApi(term)}
           >
           </SearchBar>
-          <Logout setState={setLoginStatus} isDev={dev}></Logout>
+          
         </View>
 
         {dev ? <Text styles={styles.resultCountText}>Devmode</Text> : null}
